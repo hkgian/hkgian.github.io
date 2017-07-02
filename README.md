@@ -1,3 +1,1 @@
-mygithubpage 
-hopefully my professional webpage
-============
+To be written soon!
