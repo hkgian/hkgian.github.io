@@ -1,19 +1,19 @@
 body {
-    padding-top: 70px;
+    padding-top: 50px;
 }
 
 header {
   position: relative;
   /*height: 100%*/
   width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
   /*min-height: auto;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('../images/bg.jpg');
+  background-image: url('../images/bg2.jpg');
   text-align: center;
   color: white;
 }
