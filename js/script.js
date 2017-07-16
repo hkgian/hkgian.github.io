@@ -11,7 +11,7 @@
             {
              scrollTop: $anchor.top
             },
-            5000,
+            300,
             'easeOutExpo');
         return false;
     });

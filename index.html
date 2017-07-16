@@ -6,7 +6,7 @@
     <![endif]-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gianluca Interino</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -19,55 +19,103 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/script.js"></script>
 </head>
-<body id="page-top">
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#page-top">Gianluca Interino</a>
+<body>
+    <section id="page-top">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#page-top">Gianluca Interino</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#about">About</a>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#contacts">Contacts</a>
+                    </li>
+                </ul>
+
             </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#about">About</a>
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-                <li>
-                    <a href="#blog">Blog</a>
-                </li>
-                <li>
-                    <a href="#contacts">Contacts</a>
-                </li>
-            </ul>
+        </nav>
+        <header>
+            <div class="header-content">
+                <div class="header-content-inner">
+                    <h1 id="homeHeading" class="sec-bg-color">WORK IN PROGRESS</h1>
+                    <hr class="sec-bg-color">
+                    <p class="sec-bg-color">Technology lover, software engineer</p>
+                    <a href="#about" class="btn btn-primary btn-xl">Find Out More</a>
+                </div>
+            </div>
+        </header>
+    </section>
+    <section id="projects" class="section-padding sec-bg">
+        <div class="container">
+            <div class="row">
+                <h2>Projects</h2>
+            </div>
+            <h4 class="text-center padding-top-10"><strong>YaaT: </strong>Yet Another Annotation Tool</h4>
+                <div class="row padding-top-5">
+                <div class="col-md-4 col-md-offset-2">
+                    <img class="img-responsive " src="images/YAAT-tag.png" alt="" width="860" height="645">
+                    <img class="img-responsive padding-top-10" src="images/YAAT-browse.png" alt="" width="860" height="645">
+                    <img class="img-responsive padding-top-10" src="images/YAAT-describe.png" alt="" width="860" height="645">
+                    <img class="img-responsive padding-top-10" src="images/YAAT-ER.jpg" alt="" width="860" height="645">
+                    <img class="img-responsive padding-top-10" src="images/YAAT-architecture.jpg" alt="" width="860" height="645">
+                </div>
+                <div class="col-md-4">
+                    <p>
+                        YAAT is an online software annotation tool that will allow the user to tag entities in the image, since the user is a precious resource for this project the software is designed like a classical web application. In fact this architecture allows the software to handle multiple sessions, this architecture is obviously cross OS.
+                    </p>
+                    <p>
+                        YAAT is  divided in 3 layers:
+                        <ol>
+                            <li>Front End</li>
+                            <li>Back End</li>
+                            <li>DBMS</li>
+                        </ol>
+                        This structure of YAAT allows the System to be highly maintainable and allows the development to be concurrent, since using this structure we can define API that each module offers to other modules. The Front End will take care of the user input using HTML and JavaScript, building an interactive web page that allow the user to browse images, to annotate images, and to semantically search for images. All this functionalities use the APIs offered by the BackEnd. This layer is going to use web technologies like JavaScript, HTML, and CSS. The BackEnd is going to be written in python since this is a great prototyping language and through the framework FLASK we can easily implement RESTful  web services. For the communication between FrontEnd and BackEnd it’s going to be used AJAX (Asynchronous JavaScript and XML), so to optimize the performances of the web site, since we built a RESTful service the asynchronous communication is optimized. All the services, exposed by the BackEnd for the web interface, use the informations stored in a Database. As DBMS ,YAAT is going to relay on MySQL, since it’s simple, open-source and performant. A DBMS is needed because YAAT is a Web Application that could possibly be used by many users at the same time, so a DMBS will take care of the concurrency issues and no performance drawback.
+                    </p>
+                    <a href="https://drive.google.com/file/d/0B8Lf1bl0LGJpT1RKSGlFWjhJTk0/view?usp=sharing" class="btn btn-primary btn-xl" >
+                        <span class="glyphicon glyphicon-new-window" aria-hidden="true"> </span>
+                        YaaT Software Design Document
+                    </a>
+                </div>
 
-        </div>
-    </nav>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h4>RecSys</h4>
+                    <img src="https://i1.wp.com/www.isoin.es/wp-content/uploads/2016/08/recommender-systems-thumbs-up.jpg" alt="RecSys" class="img-rounded image-thumbnails">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget ornare elit, ut interdum felis. Nullam condimentum neque ac erat suscipit, eget ultricies ante facilisis. Fusce laoreet, arcu ut cursus varius, est orci sollicitudin urna, quis commodo ante quam ac lorem. Maecenas lacinia lobortis nisl, id ornare massa auctor facilisis. Vestibulum lacinia tempor nisi, vitae commodo mi sagittis blandit. Pellentesque auctor, nulla vitae tristique cursus, sapien nulla iaculis eros, ac rutrum odio massa sit amet purus. Nulla eget lectus convallis, gravida tellus eu, ullamcorper dui. Nulla vehicula arcu eu quam fermentum, id commodo purus consequat. Quisque vestibulum massa arcu, mollis hendrerit ipsum lobortis et. Proin eleifend magna ac magna vestibulum placerat.
+                    </p>
+                </div>
+            </div>
+                <div class="col-md-8 col-md-offset-2 ">
+                    <h4>smART</h4>
+                    <div class="image-thumbnails">
+                        <img src="https://www.robots.ox.ac.uk/~vgg/practicals/instance-recognition/images/cover.png" alt="" class="img-rounded image-thumbnails">
 
-    <header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1 id="homeHeading">WORK IN PROGRESS</h1>
-                <hr>
-                <p>Technology passionate software engineer</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget ornare elit, ut interdum felis. Nullam condimentum neque ac erat suscipit, eget ultricies ante facilisis. Fusce laoreet, arcu ut cursus varius, est orci sollicitudin urna, quis commodo ante quam ac lorem. Maecenas lacinia lobortis nisl, id ornare massa auctor facilisis. Vestibulum lacinia tempor nisi, vitae commodo mi sagittis blandit. Pellentesque auctor, nulla vitae tristique cursus, sapien nulla iaculis eros, ac rutrum odio massa sit amet purus. Nulla eget lectus convallis, gravida tellus eu, ullamcorper dui. Nulla vehicula arcu eu quam fermentum, id commodo purus consequat. Quisque vestibulum massa arcu, mollis hendrerit ipsum lobortis et. Proin eleifend magna ac magna vestibulum placerat.
+                    </p>
+                </div>
+                <div class="col-md-2 ">
+                    <h4>Bubble War</h4>
+                    <img src="http://imag.malavida.com/mvimgbig/download-fs/agar-io-16069-3.jpg" alt="">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget ornare elit, ut interdum felis. Nullam condimentum neque ac erat suscipit, eget ultricies ante facilisis. Fusce laoreet, arcu ut cursus varius, est orci sollicitudin urna, quis commodo ante quam ac lorem. Maecenas lacinia lobortis nisl, id ornare massa auctor facilisis. Vestibulum lacinia tempor nisi, vitae commodo mi sagittis blandit. Pellentesque auctor, nulla vitae tristique cursus, sapien nulla iaculis eros, ac rutrum odio massa sit amet purus. Nulla eget lectus convallis, gravida tellus eu, ullamcorper dui. Nulla vehicula arcu eu quam fermentum, id commodo purus consequat. Quisque vestibulum massa arcu, mollis hendrerit ipsum lobortis et. Proin eleifend magna ac magna vestibulum placerat.
+                    </p>
+                </div>
             </div>
         </div>
-    </header>
-
-    <div id="about">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget ornare elit, ut interdum felis. Nullam condimentum neque ac erat suscipit, eget ultricies ante facilisis. Fusce laoreet, arcu ut cursus varius, est orci sollicitudin urna, quis commodo ante quam ac lorem. Maecenas lacinia lobortis nisl, id ornare massa auctor facilisis. Vestibulum lacinia tempor nisi, vitae commodo mi sagittis blandit. Pellentesque auctor, nulla vitae tristique cursus, sapien nulla iaculis eros, ac rutrum odio massa sit amet purus. Nulla eget lectus convallis, gravida tellus eu, ullamcorper dui. Nulla vehicula arcu eu quam fermentum, id commodo purus consequat. Quisque vestibulum massa arcu, mollis hendrerit ipsum lobortis et. Proin eleifend magna ac magna vestibulum placerat.
-        </p>
-        <p>
-        Sed nulla ipsum, dignissim et pharetra ut, accumsan non est. Morbi et malesuada mi. Proin vitae orci a justo cursus finibus eu nec felis. Curabitur id nunc id orci aliquam mollis. Maecenas blandit nisi ut aliquet viverra. Maecenas rutrum luctus nunc eu vehicula. Duis mollis leo vel felis auctor congue. Nullam et feugiat metus. Curabitur convallis elit a nulla facilisis commodo. Aenean suscipit, erat vel placerat fermentum, erat libero faucibus magna, vitae vestibulum risus ligula eget turpis. Vestibulum sagittis erat sed mauris porttitor congue. Proin sagittis, ipsum vitae pellentesque volutpat, ante nulla convallis ante, eu convallis arcu leo id nibh. Suspendisse vitae mattis arcu, ultricies efficitur tellus. Morbi aliquet justo a tortor luctus, non pulvinar dui tristique. Vestibulum gravida malesuada sollicitudin.
-        </p>
-        <p>
-        Aliquam at dui elit. Sed tincidunt in urna eget condimentum. Nam vel aliquet metus. Nunc metus sem, convallis ac sapien scelerisque, semper bibendum enim. Aliquam finibus erat magna, et efficitur erat consequat vitae. Mauris rhoncus ante non dapibus laoreet. Donec iaculis metus vel augue dapibus bibendum. Maecenas pretium tincidunt nisl, eget imperdiet mauris mollis id. Nunc ac erat eget quam sagittis ornare non ut nunc. Nam iaculis efficitur odio, ac rutrum ligula varius vel. Vestibulum et tempor mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ut imperdiet lorem. Sed vulputate orci sed dui blandit rutrum. Fusce quis diam non eros convallis sollicitudin in eget nisi. Nunc ut nisi dignissim, volutpat nulla eu, fringilla lectus.
-        </p>
-        <p>
-        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec dignissim lorem at elit pharetra, eget ullamcorper augue rhoncus. Praesent vel diam rhoncus, lacinia ligula sed, maximus leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut commodo sagittis euismod. Nullam pellentesque, risus at sollicitudin auctor, dui leo varius velit, vitae congue neque orci a dolor. Suspendisse odio mi, porta id ullamcorper eget, tempus sit amet lacus. Sed vel erat vitae dui rhoncus gravida. Nunc eget maximus dolor, elementum consequat metus. Donec elementum nisl ornare turpis venenatis maximus. Aenean et elit in lectus fermentum posuere. Praesent nec viverra massa, id sollicitudin sem.
-        </p>
-        <p>
-        Nulla molestie justo leo, vitae volutpat lacus efficitur et. In fringilla viverra orci. Fusce interdum, magna ac vulputate malesuada, risus lectus finibus purus, a euismod purus quam in sapien. Suspendisse condimentum semper urna quis efficitur. Sed ultricies enim ut quam lobortis scelerisque. Etiam tempor purus dolor, sit amet vulputate est ullamcorper nec. Aliquam sodales eu risus gravida condimentum. Integer a mi mauris. Vivamus lacinia elementum magna eget mollis. Sed tempor volutpat arcu vitae iaculis. Aenean vel bibendum augue, nec consectetur libero. Ut posuere mollis augue euismod porttitor. Curabitur consectetur metus metus, ut vehicula libero posuere quis. Ut ligula arcu, volutpat id tempor sed, pharetra finibus libero. Sed efficitur vel mi eget tempor. Vestibulum sodales ex id risus tincidunt scelerisque a in odio.    </div>
+    </section>
     <div id="contact">
         BLABLA
     </div>

@@ -41,15 +41,38 @@ header .header-content .header-content-inner p {
   margin-bottom: 50px;
 }
 
+.section-padding {
+    padding-top: 50px;
+}
 
+.image-thumbnails {
+    max-width: 100px;
+    height: auto;
+}
 
-height: 100vh;
-    background-image: url(img/img.jpeg);/this is the same image as yours/
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.sec-bg {
+    background-color: rgb(240, 173, 78);
+}
+
+.sec-bg-color {
+    color:  rgb(240, 173, 78);
+}
+.padding-top-5 {
+    padding-top: 5px;
+}
+.padding-top-10 {
+    padding-top: 10px;
+}
+.padding-top-20 {
+    padding-top: 20px;
+}
+
+h2 {
+    font-family: "Brush Script MT", cursive;
+	font-size: 50px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: 30px;
+    color: rgb(23, 59, 117);
+}
